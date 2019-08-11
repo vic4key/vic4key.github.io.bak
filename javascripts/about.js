@@ -1,5 +1,3 @@
-/* Main JS File */
-
 $(document).ready(function(){
 	$("#mn_about").click(function() {
 		var home_header  = $(this).text();
