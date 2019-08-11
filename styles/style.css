@@ -1,5 +1,28 @@
-body {
+:root {
+	--full-size: 100%;
+	--header-padding-bottom: 50px;
+	--footer-padding-top: 50px;
+}
+
+html, body {
+	width: var(--full-size);
+	height: var(--full-size);
+}
+
+.body {
 	font-family: Georgia;
-	font-size: 14px;
-	padding-top: 50px;
+	font-size: 16px;
+	color: #ccc;
+	padding-top: var(--header-padding-bottom);
+	padding-bottom: var(--footer-padding-top);
+	background-image: url("../images/bg-100x100.png");
+	background-repeat: repeat-x repeat-y;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0px;
+	width: var(--full-size);
+	height: var(--footer-padding-top);
+	line-height: var(--footer-padding-top);
 }
