@@ -2,6 +2,8 @@
 	--full-size: 100%;
 	--header-padding-bottom: 50px;
 	--footer-padding-top: 50px;
+	--row-padding-bottom: 20px;
+	--icon-zoom-factor: 1.2;
 }
 
 html, body {
@@ -9,20 +11,43 @@ html, body {
 	height: var(--full-size);
 }
 
+#header {
+}
+
+#content {
+}
+
+#footer {
+	bottom: 0px;
+	position: fixed;
+	width: var(--full-size);
+	height: var(--footer-padding-top);
+	line-height: var(--footer-padding-top);
+}
+
 .body {
-	font-family: Georgia;
+	font-family: "Georgia";
 	font-size: 16px;
 	color: #ccc;
 	padding-top: var(--header-padding-bottom);
 	padding-bottom: var(--footer-padding-top);
-	background-image: url("../images/bg-100x100.png");
 	background-repeat: repeat-x repeat-y;
+	background-image: url("../images/tile-100x100.png");
 }
 
-.footer {
-	position: fixed;
-	bottom: 0px;
-	width: var(--full-size);
-	height: var(--footer-padding-top);
-	line-height: var(--footer-padding-top);
+.row-padding-bottom {
+	padding-bottom: var(--row-padding-bottom);
+}
+
+.fa-fw {
+	font-size: 48px;
+	color:white
+}
+
+.fa-fw:hover {
+	-moz-transform: scale(var(--icon-zoom-factor));
+	-webkit-transform: scale(var(--icon-zoom-factor));
+	-o-transform: scale(var(--icon-zoom-factor));
+	-ms-transform: scale(var(--icon-zoom-factor));
+	transform: scale(var(--icon-zoom-factor));
 }

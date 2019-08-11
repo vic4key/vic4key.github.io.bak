@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-
-<!--
- * https://fonts.google.com/
- * https://fontawesome.com/icons?d=gallery
- -->
-
 <html>
 <head>
 	<meta charset="utf-8">
@@ -14,17 +8,18 @@
 	<meta name="author" content="Vic P.">
 
 	<title>Sample</title>
+
 	<link rel="icon" href="images/favicon.ico">
 
-	<!-- Bootstrap 3.3.7 -->
 	<link rel="stylesheet" type="text/css" href="libraries/Bootstrap-3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="libraries/Bootstrap-3.3.7/css/bootstrap-theme.min.css">
 
-	<!-- Style File -->
+	<link rel="stylesheet" href="libraries/Font-Awesome-4.7.0/css/font-awesome.min.css">
+
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
-<body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+<body class="body height-100">
+	<nav class="navbar navbar-inverse navbar-fixed-top" style="margin-bottom: 0px !important">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -38,64 +33,94 @@
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">HOME</a></li>
-					<li><a id="mn_about" href="#about" data-toggle="modal" data-target="#md_modal">ABOUT</a></li>
+					<li><a id="mn_about" href="" data-toggle="modal" data-target="#md_modal">ABOUT</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-	<div class="row jumbotron">
-		<div class="container">
-			<div class="col-sm-12">
-				<center><h3><b>Hello World</b></h3></center>
+	<div id="header" class="container">
+		<div class="row"></div>
+	</div>
+
+	<div id="content" class="container">
+		<div class="row jumbotron body" style="margin-bottom: 0px !important">
+			<div class="container">
+				<div class="col-sm-12">
+					<center><h3><b>Hello World</b></h3></center>
+					<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-padding-bottom">
+			<div class="col-sm-4">
+				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+			</div>
+
+			<div class="col-sm-4">
+				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+			</div>
+
+			<div class="col-sm-4">
 				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
 			</div>
 		</div>
-	</div>
 
-	<div class="container">
 		<div class="row">
-			<div class="col-sm-4">
-				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+			<div class="col-sm-2"></div>
+
+			<div class="col-sm-8 text-center">
+				<a target="_blank" data-toggle="tooltip" title="Blog" href="http://blog.viclab.biz/">
+					<i id="link1" class="fa fa-wordpress fa-fw"></i>
+				</a>
+
+				<a target="_blank" data-toggle="tooltip" title="GitHub" href="https://github.com/vic4key/">
+					<i class="fa fa-github-square fa-fw"></i>
+				</a>
+
+				<a target="_blank" data-toggle="tooltip" title="Twitter" href="https://twitter.com/vic4key">
+					<i class="fa fa-twitter-square fa-fw"></i>
+				</a>
+
+				<a target="_blank" data-toggle="tooltip" title="Youtube" href="https://www.youtube.com/channel/UCa6sreb--oyg1LHC2LQQxPg">
+					<i class="fa fa-youtube-square fa-fw"></i>
+				</a>
+
+				<a target="_self" data-toggle="tooltip" title="Email" href="mailto:vic4key@gmail.com">
+					<i class="fa fa-envelope fa-fw"></i>
+				</a>
 			</div>
-			<div class="col-sm-4">
-				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-			</div>
-			<div class="col-sm-4">
-				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-			</div>
+
+			<div class="col-sm-2"></div>
 		</div>
 	</div>
 
-	<footer class="footer">
-		<div class="container text-center">
+	<div id="footer" class="container text-center">
+		<div class="row">
 			<span class="text-muted">Copyright © Vic P. 2019</span>
 		</div>
-	</footer>
+	</div>
 
 	<div class="modal fade" id="md_modal" role="dialog">
 		<div class="modal-dialog">
-		<div class="modal-content">
+			<div class="modal-content body">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 				<h4 class="modal-title">Modal Header</h4>
 			</div>
-			<div class="modal-body"><p>Modal Content</p></div>
+				<div class="modal-body">Modal Content</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			</div>
 		</div>
-
 		</div>
 	</div>
 
-	<!-- jQuery 3.1.1 -->
-	<script type="text/javascript" src="libraries/BQuery-3.1.1/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="libraries/jQuery-3.1.1/jquery-3.1.1.min.js"></script>
 
-	<!-- Bootstrap 3.3.7 -->
 	<script type="text/javascript" src="libraries/Bootstrap-3.3.7/js/bootstrap.min.js"></script>
 
-	<!-- Javascript File -->
-	<script type="text/javascript" src="javascripts/about.js"></script>
+	<script type="text/javascript" src="javascripts/events.js"></script>
 </body>
 </html>
