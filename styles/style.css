@@ -4,8 +4,9 @@
 
 :root {
 	--full-size: 100%;
-	--header-padding-bottom: 50px;
-	--footer-padding-top: 50px;
+	--header-height: auto;
+	--footer-height: 50px;
+	--navbar-height: 50px;
 	--row-padding-bottom: 20px;
 	--icon-zoom-factor: 1.2;
 	--color: #ddd;
@@ -23,17 +24,26 @@ html, body {
 }
 
 #header {
+	display: none;
+}
+
+#navibar {
+	display: none;
+	height: var(--navbar-height);
 }
 
 #content {
+	display: none;
+	margin-top: calc(var(--header-height) + var(--navbar-height));
 }
 
 #footer {
+	display: none;
 	bottom: 0px;
 	position: fixed;
 	width: var(--full-size);
-	height: var(--footer-padding-top);
-	line-height: var(--footer-padding-top);
+	height: var(--footer-height);
+	line-height: var(--footer-height);
 }
 
 .bg {
@@ -41,88 +51,21 @@ html, body {
 	font-size: var(--font-size);
 	color: var(--color);
 	background-repeat: repeat-x repeat-y;
-	background-image: url("../images/tile-100x100.jpg");
-}
-
-/**
- * for page loader
- */
-
-.loader {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	z-index: 1;
-	width: 150px;
-	height: 150px;
-	margin: -75px 0 0 -75px;
-	width: 120px;
-	height: 120px;
-	-webkit-animation: spin 2s linear infinite;
-	animation: spin 2s linear infinite;
-
-	border-radius: 50%;
-	border-top: 16px solid blue;
-	border-right: 16px solid green;
-	border-bottom: 16px solid red;
-	border-left: 16px solid pink;
-}
-
-.animate-bottom {
-	position: relative;
-	-webkit-animation-name: animatebottom;
-	-webkit-animation-duration: 1s;
-	animation-name: animatebottom;
-	animation-duration: 1s;
-}
-
-@-webkit-keyframes spin {
-	0% {
-		-webkit-transform: rotate(0deg);
-	}
-	100% {
-		-webkit-transform: rotate(360deg);
-	}
-}
-
-@keyframes spin {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-@-webkit-keyframes animatebottom {
-	from {
-		bottom: -100px;
-		opacity: 0
-	}
-	to {
-		bottom: 0px;
-		opacity: 1;
-	}
-}
-
-@keyframes animatebottom {
-	from {
-		bottom: -100px;
-		opacity: 0;
-	}
-	to {
-		bottom: 0;
-		opacity: 1;
-	}
+	background-image: url("../images/tile.jpg");
 }
 
 /**
  * for icons
  */
 
+.fa-light {
+	color: #fff;
+}
+
 .fa-fw {
 	font-size: 48px;
 	color: var(--color);
+	text-align: left;
 }
 
 .fa-fw:hover {
@@ -137,19 +80,23 @@ html, body {
  * for others
  */
 
-.height-100 {
-	height: var(--full-size);
+.auto-fit {
+	width: auto;
+	height: auto;
 }
 
-.height-25 {
-	height: 25%;
-}
-
-.row-padding-bottom {
+.row.padding-top {
 	padding-bottom: var(--row-padding-bottom);
 }
 
-.jumbotron {
-	margin-bottom: 0px !important;
-	background-color: transparent !important;
+.row.padding-bottom {
+	padding-bottom: var(--row-padding-bottom);
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+ul.navbar-nav > li:hover {
+	background-color: #222;
 }

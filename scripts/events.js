@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-	/* $("[data-toggle=\"tooltip\"]").tooltip(); */
+	$("[data-tooltip]:not([data-tooltip=\"\"])").darkTooltip();
 
 	$("#mn_about").click(function()
 	{
@@ -13,12 +13,8 @@ $(document).ready(function()
 	footer();
 });
 
-$(window).on("load", function()
+$(window).on("resize", function()
 {
-	$(".loader").hide();
-});
-
-$(window).on("resize", function(){
 	footer();
 });
 
