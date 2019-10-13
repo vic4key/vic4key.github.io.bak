@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-	$("[data-tooltip]:not([data-tooltip=\"\"])").darkTooltip();
+	/*$("[data-tooltip]:not([data-tooltip=\"\"])").darkTooltip();*/
 
 	$("#mn_about").click(function()
 	{
